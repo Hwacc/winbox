@@ -1204,9 +1204,9 @@ function cancel_fullscreen(){
  * @this WinBox
  */
 
-WinBox.prototype.close = function(force) {
+WinBox.prototype.close = function(force = false, ...args) {
 
-    if(this.onclose && this.onclose(force)){
+    if(this.onclose && this.onclose(force, ...args)){
 
         return true;
     }
